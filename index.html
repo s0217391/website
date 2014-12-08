@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>Pieterjan Bartels</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<!-- Using jQuery for transitions -->
+<script type="text/javascript" src="jQuery/jquery.js"></script>
+</head>
+
+<body>
+<div id="movingPanels">
+	<iframe src="overview.html" id="panel_1">
+	</iframe>
+
+	<iframe src="aboutMe.html" id="panel_2">
+	</iframe>
+
+
+	<iframe src="cv.html" id="panel_3">
+	</iframe>
+
+
+	<iframe src="projects.html" id="panel_4">
+	</iframe>
+	
+
+</div>
+
+<div id="footer">
+	<div id="nametag">
+		<h2 style="margin:0">Pieterjan Bartels</h2>
+	</div>
+	<div id="menu">
+		<h1 style="margin:0"> TEST </h1>
+	</div>
+</div>
+<script type="text/javascript">
+	var currentView = 1;
+	var amountOfViews = 4;
+	
+	$(document).ready(function (){
+		$("iframe").hide();
+		switchToView(currentView);
+	});
+
+	$(document).keydown (function(e){
+				if(e.keyCode == '39'){
+					moveRight();
+				}
+				
+				if(e.keyCode == '37'){
+					moveLeft();
+				}
+		}
+	);
+	
+	function moveLeft(){
+		if(currentView > 1) switchToView(currentView - 1);
+		else switchToView(amountOfViews);
+	}	
+	
+	function moveRight(){
+		if(currentView < amountOfViews) switchToView(currentView + 1);
+		else switchToView(1);
+	}
+	
+	function switchToView(newView){
+		currentView = newView;
+		$("iframe[id!='"+ getIdbyNumber(newView) + "']").fadeOut(500, function(){
+			$("#" + getIdbyNumber(newView)).fadeIn(750);
+		});
+	
+	}
+	
+	function getIdbyNumber(number){
+		if(number > amountOfViews) return "panel_" + 1;
+		
+		return "panel_" + number;
+	}
+</script>
+
+</body>

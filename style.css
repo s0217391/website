@@ -1,0 +1,60 @@
+
+html, body{
+	width:100%;
+	min-height:100%;
+	margin: 0px;
+	background-color:#E0E0E0;
+	font-family:Optima, sans-serif;
+	font-size: 18px;
+}
+
+.fullScreen {
+	padding-left: 10%;
+	width:80%;
+	min-height: 100%;
+	position:absolute;
+	font-family:Optima, sans-serif;
+	font-size: 24px;
+}
+
+iframe {
+	width:100%;
+	min-height: 85%;
+	margin:0px;
+	border:0px;
+	top:0%;
+	position:fixed;
+}
+
+.fullScreen p {
+	width:75%;
+}
+
+#footer {
+	width:100%;
+	height:10%;
+	position:fixed;
+	top:89%;
+	left:0%;
+	border-top: 2px solid black;
+}
+
+#nametag {
+	width:10%;
+	height: 100%;
+	position: fixed;
+	left: 0%;
+	margin-left: 5px;
+}
+
+#menu {
+	float: right;
+	width: 50%;
+	margin:0;
+}
+
+
+p {
+	margin:0px;
+	padding-bottom: 18px;
+}
