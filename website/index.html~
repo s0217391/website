@@ -79,7 +79,7 @@
 	</div>
 
 <script type="text/javascript">
-	var currentView = 4;
+	var currentView = 2;
 	var amountOfViews = 5;
 
 	$(document).ready(function (){
