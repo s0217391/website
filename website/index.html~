@@ -29,24 +29,23 @@
 				<li><a onclick="switchToView(3)">Projects</a>
 					<div style="left:-224px;"> <!-- see up -->
 						<ul>
-							<li class="oe_heading">List 1</li>
-							<li><a href="#">project1</a></li>
-							<li><a href="#">project2</a></li>
+							<li class="oe_heading">BU projects</li>
+							<li><a href="#">City Gen (Houdini)</a></li>
+							<li><a href="#">Cloth Simulator</a></li>
 						</ul>
 						<ul>
-							<li class="oe_heading">List 2</li>
-							<li><a href="#">Project 3</a></li>
-							<li><a href="#">Project 4</a></li>
+							<li class="oe_heading">Leuven projects</li>
+							<li><a href="#">Lightslice for VRLs</a></li>
+							<li><a href="#">Raytracer</a></li>
+							<li><a href="#">Global Illumination</a></li>
 						</ul>
 						<ul>
-							<li class="oe_heading">List 3</li>
-							<li><a href="#">Project 3</a></li>
-							<li><a href="#">Project 4</a></li>
-							<li><a href="#">Project 3</a></li>
-							<li><a href="#">Project 4</a></li>
-							<li><a href="#">Project 3</a></li>
-							<li><a href="#">Project 4</a></li>
-							<li><a href="#">Project 3</a></li>
+							<li class="oe_heading">Other</li>
+							<li><a href="#">BingoBuzz</a></li>
+							<li><a href="#">Visualization</a></li>
+							<li><a href="#">AGFA internship</a></li>
+							<li><a href="#">Software Engineering</a></li>
+							<li><a href="#">Other</a></li>
 						</ul>
 					</div>	
 				</li>
@@ -79,7 +78,7 @@
 	</div>
 
 <script type="text/javascript">
-	var currentView = 2;
+	var currentView = 4;
 	var amountOfViews = 5;
 
 	$(document).ready(function (){
