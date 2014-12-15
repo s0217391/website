@@ -16,6 +16,7 @@
 <link rel="stylesheet" type="text/css" href="css/content_style.css">
 </head>
 
+<body>
 <div class="content_screen">
 	<div class="content_title">
 		<h1>Projects</h1>
@@ -23,14 +24,34 @@
 	
 	
 	<div class="content_content">
-		<div class="scrollable">
-			<p>
-		
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac dictum leo. Nulla non dolor eu diam dapibus consectetur. Nullam ut nisi arcu. Maecenas eget tortor sem. Suspendisse nec sem et nibh commodo fermentum lacinia eget augue. Fusce nibh augue, porta sed aliquet in, ultrices a metus. Mauris porttitor urna adipiscing vestibulum fringilla. Sed quis semper tellus, in dapibus arcu. Pellentesque a turpis in massa bibendum blandit ut ut quam. Etiam eros nunc, tincidunt euismod ipsum vitae, semper aliquam tellus. Praesent eu mi vel justo porta semper. Morbi eleifend egestas ligula sit amet laoreet. Proin ornare orci id ipsum auctor, ullamcorper blandit urna facilisis. Nulla ultricies aliquet nisi eget laoreet. Pellentesque a dolor in purus gravida hendrerit.
-
-Duis est lectus, aliquam ac ligula ut, convallis euismod massa. Sed bibendum diam aliquam urna ornare, et elementum odio interdum. Fusce augue nisi, iaculis vel hendrerit ut, rutrum sed magna. Aenean mauris quam, vehicula id ipsum sit amet, commodo accumsan lorem. Sed quis enim lectus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Morbi semper ante vitae ullamcorper facilisis.
-
-			</p>
+		<div class="scrollable" id="project_specific">
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+
+$(function() {
+    var filename = $_GET("id");
+    
+    if(filename == undefined) filename = "default.html";
+    
+    $("#project_specific").load("projectHTMLs/" + filename);
+});
+
+
+function $_GET(variable) { 
+   	var query = window.location.search.substring(1);
+   	var vars = query.split("&");
+   	for (var i=0;i<vars.length;i++) {
+    	var pair = vars[i].split("=");
+    	if (pair[0] == variable) {
+	    	return pair[1];
+	    }
+	} 
+} 
+
+</script>
+
+</body>
+

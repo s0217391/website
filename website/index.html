@@ -30,22 +30,22 @@
 					<div style="left:-224px;"> <!-- see up -->
 						<ul>
 							<li class="oe_heading">BU projects</li>
-							<li><a href="#">City Gen (Houdini)</a></li>
-							<li><a href="#">Tearable Cloth</a></li>
+							<li><a href="#" onclick="projectContent('citygen.html')">City Gen (Houdini)</a></li>
+							<li><a href="#" onclick="projectContent('clothsim.html')">Tearable Cloth</a></li>
 						</ul>
 						<ul>
 							<li class="oe_heading">Leuven projects</li>
-							<li><a href="#">Lightslice for VRLs</a></li>
-							<li><a href="#">Raytracer</a></li>
-							<li><a href="#">Global Illumination</a></li>
+							<li><a href="#" onclick="projectContent('thesis.html')">Lightslice for VRLs</a></li>
+							<li><a href="#" onclick="projectContent('raytracer.html')">Ray tracer</a></li>
+							<li><a href="#" onclick="projectContent('CG2.html')">Global Illumination</a></li>
 						</ul>
 						<ul>
 							<li class="oe_heading">Other</li>
-							<li><a href="#">BingoBuzz</a></li>
-							<li><a href="#">Visualization</a></li>
-							<li><a href="#">AGFA internship</a></li>
-							<li><a href="#">Software Engineering</a></li>
-							<li><a href="#">Other</a></li>
+							<li><a href="#" onclick="projectContent('ui.html')">BingoBuzz</a></li>
+							<li><a href="#" onclick="projectContent('mume.html')">Visualization</a></li>
+							<li><a href="#" onclick="projectContent('agfa.html')">AGFA Graphics intern</a></li>
+							<li><a href="#" onclick="projectContent('SE.html')">Software Engineering</a></li>
+							<li><a href="#" onclick="projectContent('other.html')">Other</a></li>
 						</ul>
 					</div>	
 				</li>
@@ -110,10 +110,9 @@
 		return "panel_" + number;
 	}
 	
-	$(document).bind('scroll', function(ev) {
-		ev.preventDefault();
-		console.log('Event worked');
-    }); 	
+	function projectContent(filename){
+		document.getElementById('panel_3').src= "projects.html?id=" + filename;
+	}	
 	
 </script>
 
